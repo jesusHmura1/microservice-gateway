@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from "@nestjs/common";
 import { Observable } from "rxjs";
 import { PassengerMSG } from "src/common/constants";
 import { IPassenger } from "src/common/interfaces/passanger.interface";
@@ -26,8 +34,14 @@ export class PassengerController {
   }
 
   @Put(":id")
-  Update(@Param("id") id: string, @Body() passenger: PassengerDTO): Observable<IPassenger> {
-    return this._clientProxyPassenger.send(PassengerMSG.UPDATE, { id, passenger });
+  Update(
+    @Param("id") id: string,
+    @Body() passenger: PassengerDTO
+  ): Observable<IPassenger> {
+    return this._clientProxyPassenger.send(PassengerMSG.UPDATE, {
+      id,
+      passenger,
+    });
   }
 
   @Delete(":id")
