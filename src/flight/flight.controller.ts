@@ -1,10 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { Observable } from "rxjs";
-import { FlightsMSG, PassengerMSG } from "src/common/constants";
+import { FlightsMSG } from "src/common/constants";
 import { IFlight } from "src/common/interfaces/flight.interface";
-import { IPassenger } from "src/common/interfaces/passanger.interface";
 import { ClientProxySuperFlights } from "src/common/proxy/client-proxy";
-import { PassengerDTO } from "src/passenger/dto/passenger.dto";
 import { FlightDTO } from "./dto/flight.dto";
 
 @Controller("api/v2/flight")
