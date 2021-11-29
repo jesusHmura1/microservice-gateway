@@ -7,7 +7,7 @@ import { ClientProxySuperFlights } from "src/common/proxy/client-proxy";
 import { PassengerDTO } from "src/passenger/dto/passenger.dto";
 import { FlightDTO } from "./dto/flight.dto";
 
-@Controller("flight")
+@Controller("api/v2/flight")
 export class FlightController {
   constructor(private readonly clientProxy: ClientProxySuperFlights) {}
   private _clientProxyFlight = this.clientProxy.clientProxyFlights();
